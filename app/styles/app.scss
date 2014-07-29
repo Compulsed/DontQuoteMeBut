@@ -1,0 +1,26 @@
+@import "vendor/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+
+html, body {
+  margin: 20px;
+}
+
+// Title font
+
+.navbar {
+	// background-color: #FF5C37;
+	background-image: url(/assets/images/YZ04wj.png);
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	.navbar-header {
+		width: 100%;
+		.navbar-brand {
+			color: whitesmoke;
+			font-family: 'Great Vibes', cursive;
+			font-size: 2.5em;
+			padding-bottom: 0px;
+			padding-top: 18px;
+			width: 100%;
+		}
+	}
+}
