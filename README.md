@@ -4,6 +4,10 @@ This README outlines the details of collaborating on this Ember application.
 
 ## Installation
 
+Ensure that the latest versons of Node & NPM are installed
+Bower & PhantonJS are also required
+
+* npm install -g ember-cli
 * `git clone` this repository
 * `npm install`
 * `bower install`
