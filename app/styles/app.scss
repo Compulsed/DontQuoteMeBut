@@ -31,6 +31,7 @@ body {
 	border-bottom: solid 1px rgb(166, 52, 52);
 	.navbar-header {
 		width: 100%;
+		position: absolute;
 		.navbar-brand {
 			color: whitesmoke;
 			font-family: 'Great Vibes', cursive, Arial, Helvetica, sans-serif;
@@ -98,7 +99,17 @@ body {
 	box-shadow: 0px 0px 6px rgb(87, 87, 87) inset;
 }
 
+.navbar-default .navbar-nav > li > a {
+	color: whitesmoke;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: rgb(200, 200, 200);
+}
+
+//
 // Mobile only
+//
 @media(max-width:767px){
 
 }
