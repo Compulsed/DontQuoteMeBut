@@ -2,16 +2,28 @@
 @import url(http://fonts.googleapis.com/css?family=Great+Vibes);
 
 html, body {
-  margin: 20px;
+  margin: 0px;
+}
+
+a, h1, h2, h3, h4, h5, p {
+	font-family: 'Great Vibes', cursive;
+}
+
+html {
+	margin-top: 51px;
+}
+
+body {
+	background-color: rgb(255, 214, 196);
 }
 
 // Title font
-
 .navbar {
 	// background-color: #FF5C37;
 	background-image: url(/assets/images/YZ04wj.png);
 	background-repeat: repeat-x;
 	background-attachment: fixed;
+	border-bottom: solid 1px rgb(166, 52, 52);
 	.navbar-header {
 		width: 100%;
 		.navbar-brand {
@@ -24,3 +36,49 @@ html, body {
 		}
 	}
 }
+
+/********************************
+*			LOGIN PAGE			*
+********************************/
+
+//
+// All
+//
+
+#login-container {
+	margin-top: 40px;
+
+	.login-box {
+		padding: 0px 30px 30px;
+	}
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+	margin-left: 0px;
+}
+
+// Override the well styling
+.well {
+	background-color: white;
+	box-shadow: 0px 0px 6px rgb(87, 87, 87) inset;
+}
+
+// Mobile only
+@media(max-width:767px){
+
+}
+
+// Tablet and above
+@media(min-width:768px){
+	#login-container {
+		.container {
+			width: 400px;
+		}
+	}
+}
+
+// Small desktop
+@media(min-width:992px){}
+
+// Large desktop
+@media(min-width:1200px){}
