@@ -5,8 +5,13 @@ html, body {
   margin: 0px;
 }
 
-a, h1, h2, h3, h4, h5, p {
-	font-family: 'Great Vibes', cursive;
+h1, h2, h3, h4, h5 {
+	font-family: 'Great Vibes', cursive, Arial, Helvetica, sans-serif;
+}
+
+a, a:hover, p {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FF6C02;
 }
 
 html {
@@ -28,7 +33,7 @@ body {
 		width: 100%;
 		.navbar-brand {
 			color: whitesmoke;
-			font-family: 'Great Vibes', cursive;
+			font-family: 'Great Vibes', cursive, Arial, Helvetica, sans-serif;
 			font-size: 2.5em;
 			padding-bottom: 0px;
 			padding-top: 18px;
@@ -49,15 +54,43 @@ body {
 	margin-top: 40px;
 
 	.login-box {
-		padding: 0px 30px 30px;
+		padding: 0px 30px 20px 30px;
 	}
 }
 
+// Restyle the text input fields
+.form-control {
+	height: 30px;
+	border-radius: 30px;
+}
+
+.register-button {
+	float: right;
+}
+
+// Form text input placeholder fonts
+.form-control::-webkit-input-placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-control:-ms-input-placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-control:-moz-placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-control::-moz-placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+// To fix navbar brand text not being quite centered
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
 	margin-left: 0px;
 }
 
-// Override the well styling
+// Override the well styling to have an inner box shadow
 .well {
 	background-color: white;
 	box-shadow: 0px 0px 6px rgb(87, 87, 87) inset;
