@@ -1,0 +1,11 @@
+
+<div class="container">
+    <div class="well">
+        {{#if session.isAuthenticated}}
+            <li>YOU ARE SIGNED IN</li>
+            {{#link-to 'account'}}go to account{{/link-to}}
+        {{else}}
+            <li>YOU ARE NOT SIGNED IN</li>
+        {{/if}}
+    </div>
+</div>
