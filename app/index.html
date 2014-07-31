@@ -16,6 +16,12 @@
     <script>
       window.DontQuoteMeButENV = {{ENV}};
       window.EmberENV = window.DontQuoteMeButENV.EmberENV;
+
+      window.ENV = window.ENV || {};
+      window.ENV['simple-auth-oauth2'] = {
+        serverTokenRevokationEndpoint: '/revoke',
+      };
+
     </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/dont-quote-me-but.js"></script>
