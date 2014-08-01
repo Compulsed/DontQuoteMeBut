@@ -115,12 +115,24 @@ body {
 #feed-container {
 	margin-top: 20px;
 
-	.quote {
+	.quote, .new-quote {
 		background-color: #fff;
 		border-radius: 15px;
 		padding: 10px;
 		margin-bottom: 20px;
 		box-shadow: 0px 1px 3px #000;
+
+		.new-quote-title {
+			font-family: 'Cardo', cursive, Arial, Helvetica, sans-serif;
+			font-size: 1.5em;
+			color: black;
+			font-style: italic;
+		}
+
+		.quote-text-area {
+			max-width: 100%;
+			margin-bottom: 10px;
+		}
 
 		.minor-text{
 			color: rgb(163, 163, 163);
@@ -169,7 +181,7 @@ body {
 		}
 	}
 
-	#feed-container{
+	#feed-container {
 		width: 500px;
 	}
 }
