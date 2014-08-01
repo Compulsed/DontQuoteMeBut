@@ -27,6 +27,10 @@ Quote.reopenClass({
             id: 5,
             message: 'Fixtures are dumb',
             author: 'DJ Parker'
+        },  {
+            id: 6,
+            message: 'NAH',
+            author: 'DJ SALTER IN THE HOUSE'
         }
     ]
 });

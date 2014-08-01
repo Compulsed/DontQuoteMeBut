@@ -1,6 +1,21 @@
 <div class="container">
 
     <h1 id="page-title">Ze Stream</h1>
+
+    <div class="well post">
+    {{#if session.isAuthenticated}}
+        {{textarea value=quoteText}}
+        <div>
+            <p>Author:</p>
+            {{input value=authorText}}
+            <button {{action "submit"}} class="btn btn-danger pull-right">Post</button>
+        </div>
+    {{else}}
+        <p>You must be signed in to post</p>
+    {{/if}}
+    </div>
+
+
     <div class="well">
         {{#each quote in model}}
         <div class="well quote">
