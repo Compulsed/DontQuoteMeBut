@@ -1,5 +1,6 @@
 @import "vendor/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(http://fonts.googleapis.com/css?family=Cardo:400italic,700);
 
 html, body {
   margin: 0px;
@@ -111,6 +112,48 @@ body {
 	color: rgb(200, 200, 200);
 }
 
+#feed-container {
+	margin-top: 20px;
+
+	.quote {
+		background-color: #fff;
+		border-radius: 15px;
+		padding: 10px;
+		margin-bottom: 20px;
+		box-shadow: 0px 1px 3px #000;
+
+		.minor-text{
+			color: rgb(163, 163, 163);
+		}
+
+		.quote-body-container {
+			.quote-body {
+				float: left;
+				font-style: italic;
+				.quotee {
+					float: right;
+					clear: both;
+					font-weight: bold;
+				}
+			}
+
+			p {
+				font-family: 'Cardo', cursive, Arial, Helvetica, sans-serif;
+				font-size: 1.5em;
+				color: black;
+			}
+		}
+
+		.user {
+			float: left;
+		}
+
+		.timestamp {
+			float: right;
+		}
+	}
+}
+
 //
 // Mobile only
 //
@@ -124,6 +167,10 @@ body {
 		.container {
 			width: 400px;
 		}
+	}
+
+	#feed-container{
+		width: 500px;
 	}
 }
 

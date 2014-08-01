@@ -5,6 +5,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('index', {path: '/'}, function(){
+  	this.route('quote');
+  });
+
   this.route('login');
   this.route('feedback');
 });
