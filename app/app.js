@@ -11,4 +11,6 @@ var App = Ember.Application.extend({
 
 loadInitializers(App, 'dont-quote-me-but');
 
+
+
 export default App;

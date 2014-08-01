@@ -5,8 +5,14 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+
+  this.resource('index', {path: '/'}, function(){
+    this.resource('post', {path: '/post/:post_id'}, function(){
+
+    });
+  });
+
   this.route('login');
-  this.route('stream');
   this.route('account'); // Protected
 });
 

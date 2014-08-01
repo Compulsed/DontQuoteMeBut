@@ -1,11 +1,11 @@
-
 <div class="container">
+
+    <h1 id="page-title">Ze Stream</h1>
     <div class="well">
-        {{#if session.isAuthenticated}}
-            <li>YOU ARE SIGNED IN</li>
-            {{#link-to 'account'}}go to account{{/link-to}}
-        {{else}}
-            <li>YOU ARE NOT SIGNED IN</li>
-        {{/if}}
+        {{#each quote in model}}
+        <div class="well quote">
+            <p class="">{{quote.message}} <small>~ {{quote.author}}</small></p>
+        </div>
+        {{/each}}
     </div>
 </div>
