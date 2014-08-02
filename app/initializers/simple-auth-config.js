@@ -14,7 +14,7 @@ restore: function(properties) {
 },
 authenticate: function() {
   return new Ember.RSVP.Promise(function(resolve, reject) {
-    FB.getLoginStatus(function(fbResponse) {
+    window.FB.getLoginStatus(function(fbResponse) {
       if (fbResponse.status === 'connected') {
         Ember.run(function() {
           resolve({ accessToken: fbResponse.authResponse.accessToken });
@@ -22,7 +22,7 @@ authenticate: function() {
       } else if (fbResponse.status === 'not_authorized') {
         reject();
       } else {
-        FB.login(function(fbResponse) {
+        window.FB.login(function(fbResponse) {
           if (fbResponse.authResponse) {
             Ember.run(function() {
               resolve({ accessToken: fbResponse.authResponse.accessToken });
@@ -37,7 +37,7 @@ authenticate: function() {
 },
 invalidate: function() {
   return new Ember.RSVP.Promise(function(resolve, reject) {
-    FB.logout(function(response) {
+    window.FB.logout(function(response) {
       Ember.run(resolve);
     });
   });
