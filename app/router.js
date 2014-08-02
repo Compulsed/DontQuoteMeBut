@@ -5,12 +5,16 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+
   this.resource('index', {path: '/'}, function(){
-  	this.route('quote');
+    this.resource('post', {path: '/post/:post_id'}, function(){
+
+    });
   });
 
   this.route('login');
   this.route('feedback');
+  this.route('account'); // Protected
 });
 
 export default Router;

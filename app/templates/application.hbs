@@ -11,11 +11,20 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li>{{#link-to 'login'}}LOGIN{{/link-to}}</li>
+				{{#if session.isAuthenticated}}
+					<li><a {{ action 'invalidateSession' }} href="#">SIGNOUT</a></li>
+				{{else}}
+					<li>{{#link-to 'login'}}LOGIN{{/link-to}}</li>
+				{{/if}}
 			</ul>
 		</div>
 	</div>
 </div>
 <div class="container">
 	{{outlet}}
+</div>
+
+{{!complains in console otherwise}}
+<div id='fb-root'>
+
 </div>

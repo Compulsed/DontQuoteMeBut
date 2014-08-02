@@ -24,6 +24,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+
   }
 
   if (environment === 'test') {
@@ -32,6 +33,11 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
 
+  }
+
+  ENV['simple-auth-oauth2'] = {
+    serverTokenEndpoint: 'http://localhost:8080/token',
+    serverTokenRevokationEndpoint: 'http://localhost:8080/revoke'
   }
 
   return ENV;
