@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
+
 export default Ember.Controller.extend({
 
     actions: {
@@ -16,8 +17,10 @@ export default Ember.Controller.extend({
             if (!authorText) { return false; }
             if (!authorText.trim()) { return; }
 
-            this.set('authorText', '');
-            this.set('quoteText', '');
+            this.setProperties({
+                authorText: '',
+                quoteText: ''
+            });
 
             var newQuote = this.store.createRecord('quote', {
                 message: quoteText,

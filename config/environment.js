@@ -36,7 +36,8 @@ module.exports = function(environment) {
   }
 
   ENV['simple-auth-oauth2'] = {
-    serverTokenEndpoint: 'http://localhost:8080/token'
+    serverTokenEndpoint: 'http://localhost:8080/token',
+    serverTokenRevokationEndpoint: 'http://localhost:8080/revoke'
   }
 
   return ENV;
