@@ -2,7 +2,8 @@ import DS from "ember-data";
 
 var Quote = DS.Model.extend({
     message: DS.attr('string'),
-    author: DS.attr('string')
+    author: DS.attr('string'),
+    timestamp: DS.attr('date', { defaultValue: new Date() })
 });
 
 Quote.reopenClass({
