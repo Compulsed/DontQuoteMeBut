@@ -1,12 +1,36 @@
 <div id="feed-container" class="container">
 	<div class="new-quote col-xs-12">
+	{{#if session.isAuthenticated}}
 		<div class="new-quote-title">New Quote</div>
 		<form id="new-quote-form">
-			<textarea class="form-control quote-text-area" name="quote" rows=4></textarea>
-			<input type="submit" class="btn btn-default btn-danger">
+			{{textarea value=quoteText class="form-control quote-text-area" name="quote" rows=4 placeholder="What did they say? (without quotes)"}}
+			{{!-- <textarea class="form-control quote-text-area" name="quote" rows=4></textarea> --}}
+			<div class="quotee-input">
+			{{input value=authorText class="form-control" placeholder="Who said it?"}}
+			</div>
+			<input type="submit" {{action "submit"}} class="btn btn-default btn-danger">
 		</form>
+	{{else}}
+		<div class="signin-to-post">
+			<p>You must be signed in to post</p>
+		</div>
+	{{/if}}
 	</div>
 	
+	{{#each quote in model}}
+	<div class="quote col-xs-12">
+		<div class="quote-body-container">
+			<p class="quote-body"><span class="quotation-mark">"</span>{{quote.message}}<span class="quotation-mark">"</span><span class="quotee"> - {{quote.author}}</span></p>
+		</div>
+		<div class="minor-text user">
+			{{quote.user}}
+		</div>
+		<div class="minor-text timestamp">
+			{{quote.timestamp}}
+		</div>
+	</div>
+	{{/each}}
+
 	<div class="quote col-xs-12">
 		<div class="quote-body-container">
 			<p class="quote-body"><span class="quotation-mark">"</span>I'm pretty sure the earth orbits the moon, not vice-versa.<span class="quotation-mark">"</span><span class="quotee"> - Dale Salter</span></p>
