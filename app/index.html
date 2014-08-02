@@ -16,7 +16,13 @@
   <body>
     <script>
       // setup Facebook SDK
-      FB.init({ appId: '862668703745156' });
+      FB.init({
+        appId      : '862668703745156',
+        cookie     : true,  // enable cookies to allow the server to access
+                            // the session
+        xfbml      : true,  // parse social plugins on this page
+        version    : 'v2.0' // use version 2.0
+      });
 
 
       window.DontQuoteMeButENV = {{ENV}};
